@@ -5,6 +5,7 @@ public class ListItemClass {
     String data_2;
     String data_3;
     String data_4;
+    String data_5;
 
     public String getData_1() {
         return data_1;
@@ -37,4 +38,8 @@ public class ListItemClass {
     public void setData_4(String data_4) {
         this.data_4 = data_4;
     }
+
+    public String getData_5() {   return data_5;   }
+
+    public void setData_5(String data_5) {   this.data_5 = data_5;    }
 }

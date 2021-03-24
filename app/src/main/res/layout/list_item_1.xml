@@ -9,20 +9,22 @@
 
     <TextView
         android:id="@+id/tvData1"
-        android:layout_width="wrap_content"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@android:color/background_dark"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvData2"
-        android:layout_width="wrap_content"
+        android:layout_width="10dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@color/black"
@@ -30,9 +32,10 @@
 
     <TextView
         android:id="@+id/tvData3"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@color/black"
@@ -40,11 +43,24 @@
 
     <TextView
         android:id="@+id/tvData4"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@android:color/black"
         android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvData5"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
+        android:gravity="left"
+        android:text="руб."
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
 </LinearLayout>

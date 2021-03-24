@@ -37,6 +37,7 @@ public class CustomArrayAdapter extends ArrayAdapter<ListItemClass> {
             viewHolder.data2 = convertView.findViewById(R.id.tvData2);
             viewHolder.data3 = convertView.findViewById(R.id.tvData3);
             viewHolder.data4 = convertView.findViewById(R.id.tvData4);
+            viewHolder.data5 = convertView.findViewById(R.id.tvData4);
             convertView.setTag(viewHolder);
 
 
@@ -47,6 +48,7 @@ public class CustomArrayAdapter extends ArrayAdapter<ListItemClass> {
         viewHolder.data2.setText(listItemMain.getData_2());
         viewHolder.data3.setText(listItemMain.getData_3());
         viewHolder.data4.setText(listItemMain.getData_4());
+        viewHolder.data5.setText(listItemMain.getData_4());
 
         return convertView;
     }
@@ -56,6 +58,7 @@ public class CustomArrayAdapter extends ArrayAdapter<ListItemClass> {
         TextView data2;
         TextView data3;
         TextView data4;
+        TextView data5;
 
 
     }
