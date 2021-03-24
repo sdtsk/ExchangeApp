@@ -1,6 +1,7 @@
 package dss.exchangeapp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -45,17 +46,13 @@ public class MainActivity extends AppCompatActivity {
         arrayList = new ArrayList<>();
         adapter = new CustomArrayAdapter(this, R.layout.list_item_1, arrayList, getLayoutInflater());
         listView.setAdapter(adapter);
-//        Reset();
         Button buttonParse = findViewById(R.id.button_parse);
         buttonParse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                runnable = new Runnable() {
-                    @Override
-                    public void run() {
+                        adapter.clear();
+                        adapter.notifyDataSetChanged();
                         getWeb();
-                    }
-                };
             }
         });
         runnable = new Runnable() {
@@ -66,15 +63,25 @@ public class MainActivity extends AppCompatActivity {
         };
         secThread = new Thread(runnable);
         secThread.start();
+        Reset();
     }
 
-    public void Reset(){
-        long timeInterval = 10000;
+    public void Reset() {
+        long timeInterval = 0;
         long delaySeconds = 10000;
         TimerTask taskOne = new TimerTask() {
             @Override
             public void run() {
+                Log.d("MyLog", "reset");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.clear();
+                        adapter.notifyDataSetChanged();
+                    }
+                });
                 getWeb();
+
             }
         };
         Timer timer = new Timer();
@@ -84,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public void getWeb() {
 
         String url = "https://www.cbr-xml-daily.ru/daily_json.js";
+        Log.d("MyLog", "intintint");
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {

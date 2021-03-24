@@ -15,7 +15,7 @@
         android:background="#DBDFDF"
         android:fontFamily="sans-serif-light"
         android:paddingLeft="30dp"
-        android:paddingTop="10dp"
+        android:paddingTop="11dp"
         android:shadowColor="#454545"
         android:text="Курс валют"
         android:textColor="#292A30"
@@ -44,28 +44,6 @@
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-light"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="1"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:backgroundTint="#798185"
-        app:cornerRadius="0dp"
-        app:iconPadding="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ListView
