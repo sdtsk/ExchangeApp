@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         arrayList = new ArrayList<>();
         adapter = new CustomArrayAdapter(this, R.layout.list_item_1, arrayList, getLayoutInflater());
         listView.setAdapter(adapter);
-        Button buttonParse = findViewById(R.id.button_parse);
+        Button buttonParse = findViewById(R.id.buttonParse);
+
         buttonParse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,24 +56,25 @@ public class MainActivity extends AppCompatActivity {
                         getWeb();
             }
         });
+
         runnable = new Runnable() {
             @Override
             public void run() {
                 getWeb();
             }
         };
+
         secThread = new Thread(runnable);
         secThread.start();
-        Reset();
+        reset();
     }
 
-    public void Reset() {
+    public void reset() {
         long timeInterval = 0;
         long delaySeconds = 10000;
         TimerTask taskOne = new TimerTask() {
             @Override
             public void run() {
-                Log.d("MyLog", "reset");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -81,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 getWeb();
-
             }
         };
         Timer timer = new Timer();
@@ -91,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     public void getWeb() {
 
         String url = "https://www.cbr-xml-daily.ru/daily_json.js";
-        Log.d("MyLog", "intintint");
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                                 items.setData_3(name);
                                 items.setData_4(value);
                                 arrayList.add(items);
+
                             }
                             runOnUiThread(new Runnable() {
                                 @Override
@@ -146,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         });
-
         mQueue.add(request);
     }
 }

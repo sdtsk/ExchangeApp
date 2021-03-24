@@ -1,6 +1,6 @@
 package dss.exchangeapp;
 
-public class ListItemClass {
+public class ListItemClass{
     String data_1;
     String data_2;
     String data_3;
@@ -41,5 +41,5 @@ public class ListItemClass {
 
     public String getData_5() {   return data_5;   }
 
-    public void setData_5(String data_5) {   this.data_5 = data_5;    }
+    public void setData_5(String data_5) { this.data_5 = data_5; }
 }
